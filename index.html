@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebSocket Example</title>
+  </head>
+  <body>
+    <script>
+      const socket = new WebSocket('ws://localhost:3000')
+
+      // Connection opened
+      socket.addEventListener('open', (event) => {
+        console.log('Connected to the WebSocket server')
+
+        // Send a message to the server
+        socket.send('Hello, WebSocket server!')
+      })
+
+      // Listen for messages from the server
+      socket.addEventListener('message', (event) => {
+        console.log('Message from server:', event.data)
+      })
+
+      // Connection closed
+      socket.addEventListener('close', (event) => {
+        console.log('Connection closed')
+      })
+    </script>
+  </body>
+</html>

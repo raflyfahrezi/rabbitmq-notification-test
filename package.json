@@ -1,0 +1,11 @@
+{
+  "name": "rabbitmq-notification-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "readline": "^1.3.0",
+    "ws": "^8.16.0"
+  }
+}
